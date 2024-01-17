@@ -3,26 +3,26 @@ import { type } from "os";
 
 const userSchema= mongoose.Schema({
     username:{
-        type: string,
+        type: String,
         required: true,
         unique:true
 
     },
     email:{
-        type: string,
+        type: String,
         required: true,
         unique:true
     },
     password:{
-        type: string,
+        type: String,
         required: true,
     },
     isVerified:{
-        type: boolean,
+        type: Boolean,
         default: false
     },
     isAdmin:{
-        type: boolean,
+        type: Boolean,
         default: false
     },
     forgotPasswordToken: string,
