@@ -30,7 +30,7 @@ export const sendEmail = async({email, emailType, userId}:any)=>{
             subject: emailType==="VERIFY"?"Verify Your Email":"Reset your password"
           }
 
-          const mailResponse = await transport.sendEmail(mailOptions)
+          const mailResponse = await transport.sendMail(mailOptions)
           return mailResponse
     
  } catch (error:any) {
